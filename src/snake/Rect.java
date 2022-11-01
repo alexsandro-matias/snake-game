@@ -1,5 +1,4 @@
 package snake;
 
-public class Rect {
-
-}
+public class Rect
+{}
