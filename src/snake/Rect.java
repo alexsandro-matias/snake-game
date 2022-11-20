@@ -1,32 +1,29 @@
 package snake;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Point;
 
-public class Rect
-{
-	private int x;
-	private int y;
-	private int width;
-	private int height;
-	private Color color;
-	
-	public Rect(int x, int y, int width, int height, Color color)
-	{
-		this.x = x;
-		this.y = y;
-		this.width = width;
-		this.height = height;
-		this.color = color;
+// Como Rect herda de Drawable, e esta última tem uma cor, não é mais necessário deixar esse atributo aqui.
+public class Rect extends Drawable {
+	// Dando sentindo a um ponto numa coordenada. Para isso utilizamos a classe
+	// "Point"
+	private Point location;
+	// Da mesma forma para fazer um retângulo, usaremos a classe Dimension.
+	private Dimension dimension;
+
+	public Rect(Point point, Dimension dimension, Color color) {
+		this.location = point;
+		this.dimension = dimension;
 	}
-	
-	// Criando um método importando de do pacote awt que
-	// faz com que o retângulo saiba se desenhar na tela.
-	// Este método será utilizado no momento que objeto do tipo triângulo for
-	// utilizado
-	public void paint(Graphics g)
-	{
-		g.setColor(color);
-		g.fillRect(x, y, width, height);
+
+	@Override
+	public void draw(Graphics g) {
+		// Como esse método abaixo espera um valor inteiro. Para contornar isso, teremos
+		// que fazer um casting do valor dos argumentos.
+		g.fillRect((int) location.getX(), (int) location.getY(), (int) dimension.getWidth(),
+				(int) dimension.getHeight());
+
 	}
 }
