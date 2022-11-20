@@ -5,19 +5,20 @@ import java.awt.Graphics;
 
 import javax.swing.JFrame;
 
-@SuppressWarnings("serial") public class GameWindow extends JFrame
-{
+@SuppressWarnings("serial")
+public class GameWindow extends JFrame {
 	// Para criação de uma janela,
 	// é necessário um construtor de uma janela.
 	//
 	// Retângulo que ser utilizado da classe implementada
 	private Rect rect;
-	
-	public GameWindow()
-	{
+	private Rect dentro;
+
+	public GameWindow() {
 		//
 		// Criando um objeto do tipo retângulo que será parâmetro já com o construtor.
 		rect = new Rect(0, 0, Constants.WINDOW_WIDTH, Constants.WINDOW_HEIGHT, Color.BLACK);
+		dentro = new Rect(50, 50, 100, 100, Color.ORANGE);
 		// Antes de Criar o construtor
 		// // Pegando o ínicio da janela como referência
 		// rect.setX(0);
@@ -48,9 +49,9 @@ import javax.swing.JFrame;
 		// o método da superclasse. Então é necessário a sobrescrita deste
 		// método.
 	}
-	
-	@Override public void paint(Graphics g)
-	{
+
+	@Override
+	public void paint(Graphics g) {
 		// g.setColor(Color.GREEN);
 		// // Desenhando um Retângulo preenchido com a cor definida na linha de
 		// // cima.
@@ -65,5 +66,6 @@ import javax.swing.JFrame;
 		// retângulo da classe implementada.
 		// que será um novo atributo privado.
 		rect.paint(g);
+		dentro.paint(g);
 	}
 }
