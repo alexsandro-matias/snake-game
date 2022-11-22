@@ -4,12 +4,13 @@ import java.awt.Graphics;
 
 import javax.swing.JFrame;
 
-@SuppressWarnings("serial")
-public class GameWindow extends JFrame {
+@SuppressWarnings("serial") public class GameWindow extends JFrame
+{
 	private Rect background;
 	private Snake snake;
-
-	public GameWindow() {
+	
+	public GameWindow()
+	{
 		snake = new Snake();
 		//
 		setSize(Constants.WINDOW_HEIGHT, Constants.WINDOW_WIDTH);
@@ -19,14 +20,13 @@ public class GameWindow extends JFrame {
 		setLocationRelativeTo(null);
 		setVisible(true);
 	}
-
-	@Override
-	public void paint(Graphics g) {
-
+	
+	@Override public void paint(Graphics g)
+	{
 		background.draw(g);
 		snake.draw(g);
 	}
 }
-
-//todo o jogo vai se basear na junção de vários retângulos. 
-//Logo essa nova classe "Drawable" vai conceber a ideia da figura ser desenhada na tela com o método "paint()"
+// todo o jogo vai se basear na junção de vários retângulos.
+// Logo essa nova classe "Drawable" vai conceber a ideia da figura ser desenhada
+// na tela com o método "paint()"
