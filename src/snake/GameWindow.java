@@ -12,7 +12,7 @@ import javax.swing.JFrame;
 	public GameWindow()
 	{
 		snake = new Snake();
-		//
+		background = new Rect();
 		setSize(Constants.WINDOW_HEIGHT, Constants.WINDOW_WIDTH);
 		setResizable(false);
 		setTitle(Constants.WINDOW_TITLE);

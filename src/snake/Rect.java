@@ -14,7 +14,7 @@ public class Rect extends Drawable
 	// Da mesma forma para fazer um retângulo, usaremos a classe Dimension.
 	private Dimension dimension;
 	
-	public Rect(Point point, Dimension dimension, Color color)
+	public Rect(Point point, Dimension dimension)
 	{
 		this.location = point;
 		this.dimension = dimension;
