@@ -1,23 +1,24 @@
 package snake;
 
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Point;
 
-// Como Rect herda de Drawable, e esta última tem uma cor, não é mais necessário deixar esse atributo aqui.
 public class Rect extends Drawable
 {
-	// Dando sentindo a um ponto numa coordenada. Para isso utilizamos a classe
-	// "Point"
 	private Point location;
-	// Da mesma forma para fazer um retângulo, usaremos a classe Dimension.
 	private Dimension dimension;
 	
 	public Rect(Point point, Dimension dimension)
 	{
 		this.location = point;
 		this.dimension = dimension;
+	}
+	
+	public Rect(int x, int y, int width, int height)
+	{
+		this.location = new Point(x, y);
+		this.dimension = new Dimension(width, height);
 	}
 	
 	@Override public void draw(Graphics g)
