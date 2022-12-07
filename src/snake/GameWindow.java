@@ -27,6 +27,3 @@ import javax.swing.JFrame;
 		snake.draw(g);
 	}
 }
-// todo o jogo vai se basear na junção de vários retângulos.
-// Logo essa nova classe "Drawable" vai conceber a ideia da figura ser desenhada
-// na tela com o método "paint()"

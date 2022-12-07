@@ -1,5 +1,4 @@
 package snake;
 
-public class Direction {
-
-}
+public class Direction
+{}

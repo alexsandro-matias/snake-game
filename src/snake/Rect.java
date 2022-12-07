@@ -23,10 +23,17 @@ public class Rect extends Drawable
 	
 	@Override public void draw(Graphics g)
 	{
-		// Como esse método abaixo espera um valor inteiro. Para contornar isso,
-		// teremos
-		// que fazer um casting do valor dos argumentos.
 		g.fillRect((int) location.getX(), (int) location.getY(), (int) dimension.getWidth(),
 				(int) dimension.getHeight());
+	}
+	
+	public Point getLocation()
+	{
+		return location;
+	}
+	
+	public Dimension getDimension()
+	{
+		return dimension;
 	}
 }
